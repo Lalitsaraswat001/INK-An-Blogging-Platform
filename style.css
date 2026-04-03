@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #6a11cb, #2575fc, #ff6a00, #ff2e63);
+    background-size: 800% 800%;
+    animation: gradientMove 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.card {
+    width: 450px;
+    padding: 55px 45px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.switch {
+    margin-bottom: 20px;
+}
+
+.switch button {
+    padding: 10px 22px;
+    border: none;
+    margin: 6px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    transition: 0.3s;
+}
+
+.switch button:nth-child(1) {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.switch button:nth-child(2) {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.switch button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+}
+
+.form.active {
+    display: flex;
+    animation: slide 0.4s ease;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+input {
+    padding: 14px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+}
+
+.mainBtn {
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mainBtn:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
+}
+
+.guest {
+    margin-top: 20px;
+}
+
+.guestBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #00ffcc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.guestBtn:hover {
+    transform: scale(1.1);
+}

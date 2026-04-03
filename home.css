@@ -1,0 +1,250 @@
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+    animation: slideDown 0.7s ease;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff5a2f;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.write-btn {
+    background: #ff5a2f;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.write-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px 50px 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    max-width: 700px;
+    margin: auto;
+    animation: fadeUp 1s ease;
+}
+
+.hero span {
+    color: #ff5a2f;
+}
+
+.hero p {
+    color: #666;
+    margin-top: 20px;
+    font-size: 18px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeUp 1.4s ease;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    animation: fadeUp 1.8s ease;
+}
+
+.read-btn {
+    background: #ff5a2f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.read-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-btn {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.post-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 40px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.4s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff5a2f;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #eee;
+    color: #777;
+    margin-top: auto;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:900px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+    .features {
+        gap: 25px;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+    .hero {
+        padding: 70px 20px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 15px;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .read-btn,
+    .post-btn {
+        width: 200px;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+    .feature-card {
+        width: 90%;
+    }
+}
+
+.read-btn,
+.post-btn,
+.write-btn {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a {
+    color: inherit;
+}
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .blog-card {
+    background: #1e1e1e;
+}
+
+.dark .navbar {
+    background: #1e1e1e;
+}
