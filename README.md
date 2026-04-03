@@ -23,12 +23,6 @@
 
 ---
 
-## 🌐 Live Demo
-
-*Not deployed yet*
-
----
-
 ## 📂 Project Structure
 
 ```
